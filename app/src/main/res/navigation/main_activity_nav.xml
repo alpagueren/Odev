@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.odev4.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/action_anasayfaFragment_to_ASayfaFragment"
+            app:destination="@id/ASayfaFragment" />
+        <action
+            android:id="@+id/action_anasayfaFragment_to_XSayfaFragment"
+            app:destination="@id/XSayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ASayfaFragment"
+        android:name="com.example.odev4.ASayfaFragment"
+        android:label="fragment_a_sayfa"
+        tools:layout="@layout/fragment_a_sayfa" >
+        <action
+            android:id="@+id/action_ASayfaFragment_to_BSayfaFragment"
+            app:destination="@id/BSayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BSayfaFragment"
+        android:name="com.example.odev4.BSayfaFragment"
+        android:label="fragment_b_sayfa"
+        tools:layout="@layout/fragment_b_sayfa" >
+        <action
+            android:id="@+id/action_BSayfaFragment_to_YSayfaFragment"
+            app:destination="@id/YSayfaFragment"
+            app:popUpTo="@id/BSayfaFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/XSayfaFragment"
+        android:name="com.example.odev4.XSayfaFragment"
+        android:label="fragment_x_sayfa"
+        tools:layout="@layout/fragment_x_sayfa" >
+        <action
+            android:id="@+id/action_XSayfaFragment_to_YSayfaFragment"
+            app:destination="@id/YSayfaFragment"
+            app:popUpTo="@id/XSayfaFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/YSayfaFragment"
+        android:name="com.example.odev4.YSayfaFragment"
+        android:label="fragment_y_sayfa"
+        tools:layout="@layout/fragment_y_sayfa" />
+</navigation>
